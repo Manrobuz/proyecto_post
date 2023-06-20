@@ -1,0 +1,18 @@
+<h1>Ver todos los post Registrados</h1>
+
+<% Post.all.each do |post| %>
+  <div class="post">
+    <p>Post (ID): <%= post.id %></p>
+    <p>Post (Autor): <%= post.author %></p>
+    <p>Post (Contenido): <%= post.content %></p>
+    <%= image_tag post.image, size: '100x100' %>
+    <hr>
+  </div>
+  <br><br>
+  <%= link_to "Volver al formulario", home_index_path %>
+  
+<% end %>
+
+
+
+
